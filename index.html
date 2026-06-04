@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>慣用色名クイズ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🎨 慣用色名クイズ</h1>
+
+        <p>スコア：<span id="score">0</span></p>
+
+        <div id="colorBox"></div>
+        <div id="choices"></div>
+
+        <button onclick="showHint()">ヒント</button>
+        <div id="hint"></div>
+
+        <div id="result"></div>
+        <div id="explanation"></div>
+
+        <button onclick="nextQuestion()">次の問題</button>
+        <button onclick="showReview()">間違い一覧</button>
+        <button onclick="startReview()">復習モード</button>
+
+        <div id="review"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
