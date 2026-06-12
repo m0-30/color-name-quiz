@@ -62,6 +62,9 @@ let reviewMode = false;
 let reviewIndex = 0;
 let lastQuestion = null;
 
+let gameMode = "normal";
+let questionCount = 0;
+
 // ヒント
 function showHint() {
   document.getElementById("hint").innerText = "ヒント：" + current.hint;
@@ -186,4 +189,13 @@ function getTextColor(bgColor) {
 
   return brightness > 140 ? "#000" : "#fff";
 }
-generateQuestion();
+
+function startGame(mode) {
+  gameMode = mode;
+  document.getElementById("modeScreen").style.display = "none";
+  document.getElementById("quizScreen").style.display = "block";
+  score = 0;
+  questionCount = 0;
+  document.getElementById("score").innerText = score;
+  generateQuestion();
+}
