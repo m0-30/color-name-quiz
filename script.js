@@ -141,10 +141,17 @@ function checkAnswer(ans) {
   document.getElementById("explanation").innerText = "解説：" + current.ex;
 
   if (reviewMode) reviewIndex++;
+  questionCount++;
 }
 
 // 次
 function nextQuestion() {
+  if (gameMode === "challenge" && questionCount >= 10) {
+    alert(`終了！\n\n${score} / 10問正解`);
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("modeScreen").style.display = "block";
+    return;
+  }
   generateQuestion();
 }
 
