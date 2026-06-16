@@ -123,3 +123,27 @@ button:hover{
   border-color:#f4dce8;
   background:#fff8fb;
 }
+.mode-btn {
+  width: 100%;
+  padding: 18px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 16px;
+
+ background: linear-gradient(
+    135deg,
+    #c4b5fd,
+    #f9a8d4
+  );
+
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mode-btn:hover {
+  transform: translateY(-2px);
+}
