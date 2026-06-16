@@ -18,22 +18,24 @@
             <button class="mode-btn">⌛ 1分チャレンジ</button>
         </div>
 
-        <p>スコア：<span id="score">0</span></p>
+        <div id="quizScreen" style="display:none">
+            <p>スコア：<span id="score">0</span></p>
 
-        <div id="colorBox"></div>
-        <div id="choices"></div>
+            <div id="colorBox"></div>
+            <div id="choices"></div>
 
-        <button onclick="showHint()">ヒント</button>
-        <div id="hint"></div>
+            <button onclick="showHint()">ヒント</button>
+            <div id="hint"></div>
 
-        <div id="result"></div>
-        <div id="explanation"></div>
+            <div id="result"></div>
+            <div id="explanation"></div>
 
-        <button onclick="nextQuestion()">次の問題</button>
-        <button onclick="showReview()">間違い一覧</button>
-        <button onclick="startReview()">復習モード</button>
+            <button onclick="nextQuestion()">次の問題</button>
+            <button onclick="showReview()">間違い一覧</button>
+            <button onclick="startReview()">復習モード</button>
 
-        <div id="review"></div>
+            <div id="review"></div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
