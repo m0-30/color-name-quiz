@@ -1,6 +1,6 @@
 body {
   font-family: "Arial Rounded MT Bold", "Noto Sans JP", sans-serif;
-  background: linear-gradient(135deg, #f8fafc, #eef7fb);
+  background: linear-gradient(135deg, #fff7fb, #eef7fb);
   margin: 0;
 }
 
@@ -41,7 +41,7 @@ h1 {
   padding: 16px;
   border-radius: 14px;
   border:1px solid #e5e7eb;
-  background: #ffffff;
+  background: #fff;
   transition: 0.2s;
   font-size: 16px;
   font-weight: bold;
@@ -73,7 +73,6 @@ button {
   border: none;
   font-size: 15px;
   background:#d7ebf7;
-  color:#4a5560;
   color: white;
   cursor: pointer;
 }
@@ -142,8 +141,10 @@ button:hover{
 
   cursor: pointer;
   transition: 0.2s;
+  box-shadow: 0 4px 12px rgba(196,181,253,.4);
 }
 
 .mode-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(196,181,253,.4)
 }
