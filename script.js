@@ -66,7 +66,7 @@ let gameMode = "normal";
 let questionCount = 0;
 
 let timeLeft = 60;
-let timer = null
+let timer = null;
 
 // ヒント
 function showHint() {
@@ -209,7 +209,7 @@ function startGame(mode) {
   document.getElementById("score").innerText = score;
   if (gameMode === "timer") {
     timeLeft = 60;
-    document.getElementById("timeDisplay").style.display = "block" ;
+    document.getElementById("timerDisplay").style.display = "block" ;
     startTimer();
   } else {
     document.getElementById("timerDisplay").style.display = "none";
