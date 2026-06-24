@@ -15,11 +15,12 @@
 
             <button class="mode-btn" onclick="startGame('normal')">👾 通常モード</button>
             <button class="mode-btn" onclick="startGame('challenge')">🔟 10問チャレンジ</button>
-            <button class="mode-btn">⌛ 1分チャレンジ</button>
+            <button class="mode-btn" onclick="startGame('timer')">⌛ 1分チャレンジ</button>
         </div>
 
         <div id="quizScreen" style="display:none">
             <p>スコア：<span id="score">0</span></p>
+            <p id="timerDisplay" style="display:none">残り時間：60秒<p>
 
             <div id="colorBox"></div>
             <div id="choices"></div>

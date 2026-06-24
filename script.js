@@ -65,6 +65,9 @@ let lastQuestion = null;
 let gameMode = "normal";
 let questionCount = 0;
 
+let timeLeft = 60;
+let timer = null
+
 // ヒント
 function showHint() {
   document.getElementById("hint").innerText = "ヒント：" + current.hint;
@@ -204,5 +207,28 @@ function startGame(mode) {
   score = 0;
   questionCount = 0;
   document.getElementById("score").innerText = score;
+  if (gameMode === "timer") {
+    timeLeft = 60;
+    document.getElementById("timeDisplay").style.display = "block" ;
+    startTimer();
+  } else {
+    document.getElementById("timerDisplay").style.display = "none";
+  }
   generateQuestion();
+}
+function startTimer() {
+  clearInterval(timer);
+  timer = setInterval(() => {
+    timeLeft--;
+    document.getElementById("timerDisplay").innerText =
+      "残り時間：" + timeLeft + "秒";
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      alert(
+          `時間切れ！\n\nスコア：${score}`
+      );
+      document.getElementById("quizScreen").style.display = "none";
+      document.getElementById("modeScreen").style.display = "block";
+    }
+  }, 1000);
 }
