@@ -148,3 +148,18 @@ button:hover{
   transform: translateY(-3px);
   box-shadow: 0 8px 18px rgba(196,181,253,.4)
 }
+#resultScreen{
+  text-align:center;
+}
+#resultScreen h2{
+  color:#7b6cf6;
+  margin-bottom:20px;
+}
+#finalScore{
+  font-size:28px;
+  font-weight:bold;
+}
+#finalRate{
+  color:#666;
+  margin-bottom:24px;
+}

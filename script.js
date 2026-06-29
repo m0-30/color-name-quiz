@@ -150,7 +150,7 @@ function checkAnswer(ans) {
 // 次
 function nextQuestion() {
   if (gameMode === "challenge" && questionCount >= 10) {
-    alert(`終了！\n\n${score} / 10問正解`);
+    showResult(10);
     document.getElementById("quizScreen").style.display = "none";
     document.getElementById("modeScreen").style.display = "block";
     return;
@@ -231,4 +231,17 @@ function startTimer() {
       document.getElementById("modeScreen").style.display = "block";
     }
   }, 1000);
+}
+function showResult(totalQuestions){
+  document.getElementById("quizScreen").style.display = "none";
+  document.getElementById("resultScreen").style.display = "block";
+  document.getElementById("finalScore").innerText =
+      `${score} / ${totalQuestions} 問正解`;
+  let rate = Math.round(score / totalQuestions * 100);
+  document.getElementById("finalRate").innerText =
+      `正答率 ${rate}%`;
+}
+function restartGame(){
+  document.getElementById("resultScreen").style.display="none"
+  document.getElementById("modeScreen").style.display="block"
 }
