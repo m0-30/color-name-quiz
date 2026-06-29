@@ -243,5 +243,9 @@ function showResult(totalQuestions){
 }
 function restartGame(){
   document.getElementById("resultScreen").style.display="none"
+  startGame(gameMode);
+}
+function backToMenu(){
+  document.getElementById("resultScreen").style.display="none"
   document.getElementById("modeScreen").style.display="block"
 }
