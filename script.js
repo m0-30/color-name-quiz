@@ -151,8 +151,6 @@ function checkAnswer(ans) {
 function nextQuestion() {
   if (gameMode === "challenge" && questionCount >= 10) {
     showResult(10);
-    document.getElementById("quizScreen").style.display = "none";
-    document.getElementById("modeScreen").style.display = "block";
     return;
   }
   generateQuestion();
