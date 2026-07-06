@@ -72,7 +72,11 @@ button {
   border-radius: 14px;
   border: none;
   font-size: 15px;
-  background:#d7ebf7;
+  background: linear-gradient(
+    135deg,
+    #c4b5fd,
+    #f9a8d4
+  );
   color: white;
   cursor: pointer;
 }

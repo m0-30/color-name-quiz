@@ -88,8 +88,10 @@ function generateQuestion() {
 // 復習問題
 function loadReviewQuestion() {
   if (reviewIndex >= wrongList.length) {
-    alert("復習おわり！");
     reviewMode = false;
+    showResult(
+      "復習完了！すべての復習問題が終了しました"
+    )
     return;
   }
   current = wrongList[reviewIndex];
@@ -150,7 +152,15 @@ function checkAnswer(ans) {
 // 次
 function nextQuestion() {
   if (gameMode === "challenge" && questionCount >= 10) {
-    showResult(10);
+    let rate = Math.round(score / 10 * 100);
+
+showResult(
+  "🎉 全問終了！",
+  `${score} / 10 問正解`,
+  `正答率 ${rate}%`
+);
+
+return;
     return;
   }
   generateQuestion();
@@ -230,14 +240,15 @@ function startTimer() {
     }
   }, 1000);
 }
-function showResult(totalQuestions){
+function showResult(title, scoreText, rateText){
   document.getElementById("quizScreen").style.display = "none";
   document.getElementById("resultScreen").style.display = "block";
-  document.getElementById("finalScore").innerText =
-      `${score} / ${totalQuestions} 問正解`;
-  let rate = Math.round(score / totalQuestions * 100);
-  document.getElementById("finalRate").innerText =
-      `正答率 ${rate}%`;
+
+  document.getElementById("resultTitle").innerText = title;
+  document.getElementById("finalScore").innerText = scoreText;
+  document.getElementById("finalRate").innerText = rateText;
+
+
 }
 function restartGame(){
   document.getElementById("resultScreen").style.display="none"
